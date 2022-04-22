@@ -1,0 +1,35 @@
+.login-container{
+  margin:auto;
+  max-width: 330px;
+  width: 330px;
+  padding:3.125rem 15px;
+  h2{
+    @extend .font-weight-black, .font-22;
+    color:rgba(0,0,0,0.7);
+    text-align: center;
+  }
+  .lc-logo{
+    text-align: center;
+    img{
+      width:30%;
+      margin-bottom:15px;
+    }
+  }
+  .ant-input-affix-wrapper{
+    border-radius: 4px;
+  }
+  .ant-checkbox-checked{
+    .ant-checkbox-inner{
+      background-color:$primary;
+      border-color: $primary;
+    }
+  }
+  button{
+    background-color: $primary;
+    border-color:$primary;
+    &:hover{
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+}

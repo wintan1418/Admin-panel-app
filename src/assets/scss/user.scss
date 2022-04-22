@@ -1,0 +1,36 @@
+.user-listbox {
+  .ant-select-selector {
+    max-width: 188px;
+    width: 188px !important;
+  }
+  .jetson-listing {
+    .ant-table-content {
+      th:last-child {
+        text-align: right;
+        padding-right: 65px;
+      }
+      td:last-child {
+        text-align: right;
+        padding-right: 20px;
+        .delete-btn {
+          padding: 0;
+          height: auto;
+          font-size: 20px;
+          margin-left: 1.5rem;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .jetson-listing {
+    table {
+      width: 100%;
+      th {
+        font-size: 1rem;
+      }
+    }
+  }
+}

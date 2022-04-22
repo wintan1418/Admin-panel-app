@@ -1,0 +1,10 @@
+@media print {
+  .menus-drawer {
+    .ant-list-footer {
+      display: none !important;
+    }
+    .ant-drawer-content-wrapper {
+      width: 100% !important;
+    }
+  }
+}

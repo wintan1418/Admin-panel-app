@@ -1,0 +1,12 @@
+.product-thumb{
+    display: flex;
+    img{
+        margin-right:12px;
+        border:1px solid #999999;
+        border-radius:6px;
+    }
+    span.span-text{
+        display:block;
+        margin-top:10px;
+    }
+}

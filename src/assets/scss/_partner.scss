@@ -1,0 +1,36 @@
+.width-44{
+    max-width:44rem!important;
+}
+.jetson-listing{
+    /* width */
+    ::-webkit-scrollbar {
+        width: 14px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #fff; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgba(183, 183, 183, 0.7); 
+        border-bottom-left-radius:8px;
+        border-bottom-right-radius:8px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+    table{
+        
+         tr:nth-child(even) td{
+            background-color:#fbfbfb;
+         }
+        td:first-child{
+            color:$primary;
+        }
+    }
+
+}

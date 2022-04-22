@@ -1,0 +1,85 @@
+.location-box {
+  .location-qr {
+    color: #333;
+  }
+  .select-filed {
+    width: 100%;
+  }
+  .location-btn {
+    padding-top: 25px;
+  }
+  .location-icons {
+    @extend .font-22;
+    padding: 0;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.open-days-listing {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: flex;
+    @extend .font-14, .font-weight-normal;
+    color: #333;
+    label {
+      @extend .font-14, .font-weight-normal;
+      display: inline-block;
+      min-width: 4.375rem;
+      margin-top: 0;
+    }
+    .ant-picker-time-panel-cell-inner {
+      background: $primary;
+      color: #fff;
+    }
+    .time-picker {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      width: 85px;
+      margin-right: 1.25rem;
+      &.ant-picker-focused {
+        box-shadow: none;
+      }
+      .ant-picker-suffix {
+        font-size: 0.625rem;
+        color: $primary;
+      }
+      &.time-picker:last-child {
+        margin-left: 1.25rem;
+      }
+      input {
+        border: none;
+      }
+    }
+  }
+}
+
+.add-location {
+  input {
+    margin-bottom: 0;
+  }
+  label {
+    margin-top: 1rem;
+  }
+  .location-btn-bar {
+    margin-top: 25px;
+    a {
+      text-decoration: underline;
+    }
+    button {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .location-box {
+    .location-btn {
+      padding-top: 0;
+    }
+  }
+}

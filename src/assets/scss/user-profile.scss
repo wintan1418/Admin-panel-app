@@ -1,0 +1,97 @@
+.profile-box {
+  position: relative;
+  p {
+    @extend .font-22, .font-weight-bold;
+    line-height: 2.12rem;
+    color: rgba(51, 51, 51, 0.7);
+    margin-bottom: 5px;
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+  .update-picture {
+    @extend .font-12, .font-weight-semibold;
+    padding: 14px 46px;
+    border-radius: 6px;
+  }
+  label:before {
+    display: none !important;
+  }
+  input,
+  .select-filed {
+    max-width: 15.31rem;
+    margin-bottom: 0.7rem;
+    width: 100%;
+  }
+  textarea {
+    max-width: 31.43rem;
+    width: 100%;
+  }
+  button {
+    @extend .font-20;
+    padding: 11.5px 35px;
+  }
+  .text-primary {
+    @extend .font-18;
+  }
+  .edit-profile-btn {
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
+}
+
+.change-password-form {
+  input {
+    margin-bottom: 0;
+  }
+  .ant-input-password {
+    border-radius: 4px;
+  }
+  .ant-form-item-explain {
+    min-height: unset;
+    margin-top: 5px;
+  }
+}
+
+.profile-inr-box {
+  border-radius: 4px;
+  padding: 20px 15px;
+  border: solid 1px rgba(209, 209, 209, 0.25);
+  background: #fafafa;
+}
+
+.password-strerik {
+  position: relative;
+  &:before {
+    content: "********";
+  }
+}
+
+.view-profile-info {
+  .ant-form-item-label {
+    padding-bottom: 3px;
+  }
+  .ant-form-item {
+    margin-bottom: 14px;
+  }
+  .user-info {
+    @extend .font-14, .font-weight-bold;
+    color: rgba(51, 51, 51, 0.7);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile-box {
+    h3 {
+      font-size: 1rem;
+    }
+    .avatar-box {
+      text-align: center;
+    }
+    .update-picture {
+      margin-top: 10px !important;
+    }
+  }
+}

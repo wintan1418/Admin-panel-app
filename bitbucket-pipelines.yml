@@ -1,0 +1,81 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+image: node:16.4.0
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Installing Node Modules and Generating Build
+          caches:
+            - node
+          script:
+            - rm -rf yarn.lock
+            - rm -rf node_modules
+            - unset CI
+            - yarn install
+            - npm run build:prod
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy to Production Server
+          deployment: production
+          script:
+            - pipe: atlassian/scp-deploy:1.2.1
+              variables:
+                USER: $EC2_USER
+                SERVER: $EC2_IP
+                REMOTE_PATH: $PROD_EC2_PATH
+                LOCAL_PATH: "build/*"
+                DEBUG: "true"
+    staging:
+      - step:
+          name: Installing Node Modules and Generating Build
+          caches:
+            - node
+          script:
+            - rm -rf yarn.lock
+            - rm -rf node_modules
+            - unset CI
+            - yarn install
+            - npm run build:staging
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy to Staging Server
+          deployment: staging
+          script:
+            - pipe: atlassian/scp-deploy:1.2.1
+              variables:
+                USER: $EC2_USER
+                SERVER: $EC2_IP
+                REMOTE_PATH: $STAGING_EC2_PATH
+                LOCAL_PATH: "build/*"
+                DEBUG: "true"
+    dev:
+      - step:
+          name: Installing Node Modules and Generating Build
+          caches:
+            - node
+          script:
+            - rm -rf yarn.lock
+            - rm -rf node_modules
+            - unset CI
+            - yarn install
+            - npm run build:dev
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy to Local Server
+          deployment: staging
+          script:
+            - pipe: atlassian/scp-deploy:1.2.1
+              variables:
+                USER: $LOCAL_USER
+                SERVER: $LOCAL_IP
+                REMOTE_PATH: $LOCAL_PATH
+                LOCAL_PATH: "build/*"
+                DEBUG: "true"

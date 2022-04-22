@@ -1,0 +1,234 @@
+.menu-box {
+  @extend .font-14, .font-weight-bold;
+  color: rgba(51, 51, 51, 0.7);
+  a {
+    text-decoration: underline;
+    font-size: 1rem !important;
+  }
+  h2 {
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 0 5px;
+      &:nth-child(2) {
+        @extend .font-weight-normal;
+        border-right: solid 1px #7d7d7d;
+      }
+    }
+  }
+  .ant-select-selection-item {
+    color: rgba(51, 51, 51, 0.7);
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  table {
+    th {
+      &:before {
+        display: none;
+      }
+    }
+    th:nth-child(3) {
+      text-align: right;
+    }
+    td:nth-child(3) {
+      text-align: right;
+    }
+    td:last-child {
+      padding-right: 60px !important;
+      text-align: right;
+    }
+    th:last-child {
+      text-align: right;
+      padding-right: 55px;
+    }
+    @media screen and (max-width: 768px) {
+      th {
+        font-size: 16px;
+      }
+      td {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+.addition-field {
+  align-items: start;
+  button,
+  .product-select {
+    color: $primary;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    position: relative;
+    top: -3px;
+  }
+  .menus-dropdown {
+    .ant-select-selector {
+      height: 45px;
+      .ant-select-selection-item {
+        line-height: 45px;
+        @extend .font-20, .font-weight-bold;
+      }
+    }
+  }
+}
+
+.pool-production-otr {
+  .ant-collapse-header {
+    @extend .font-weight-bold, .font-16;
+    color: rgba(51, 51, 51, 0.7) !important;
+    .ant-collapse-arrow {
+      color: $primary;
+    }
+  }
+  .ant-collapse-content-box {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .pool-product {
+    .ant-form-item {
+      flex-basis: 50%;
+      padding: 0 5px;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+    .ant-form-item-label {
+      text-align: left;
+      height: auto;
+      margin-bottom: 0 !important;
+      label {
+        margin-bottom: 0;
+      }
+    }
+    input {
+      margin-bottom: 0;
+    }
+    .search-btn {
+      display: flex;
+      align-self: flex-end;
+      margin-bottom: 15px;
+      padding-left: 10px;
+    }
+  }
+}
+
+.menus-drawer {
+  h4 {
+    @extend .font-16, .font-weight-bold;
+    color: rgba(51, 51, 51, 0.9);
+  }
+  .ant-drawer-title {
+    @extend .font-weight-black;
+    color: rgba(51, 51, 51, 0.7);
+  }
+  .primary-btn.add-prod-btn {
+    position: relative;
+    left: 200px;
+  }
+  .ant-drawer-close {
+    .anticon-close {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      color: #fff;
+      padding-top: 4px;
+      border-radius: 100%;
+      background-color: $primary;
+    }
+  }
+  .ant-drawer-body {
+    background-color: #f4f4f4;
+    padding: 24px 24px 50px;
+  }
+  .customer-listing {
+    list-style: none;
+    padding-left: 0;
+    li {
+      font-size: 16px;
+      color: rgba(51, 51, 51, 0.9);
+      line-height: 28px;
+      a {
+        color: rgba(51, 51, 51, 0.9);
+      }
+    }
+  }
+  .ant-col {
+    position: unset;
+  }
+  .drawer-item-list {
+    position: unset;
+    .ant-list-header {
+      padding: 0;
+      border: none;
+      @extend .font-16, .font-weight-bold;
+      color: rgba(51, 51, 51, 0.9);
+    }
+    li {
+      border: none;
+      padding: 0;
+      line-height: 30px;
+    }
+    div {
+      position: unset;
+    }
+    .ant-list-footer {
+      padding: 6px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgb(228, 227, 227);
+      ul {
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      li {
+        list-style: none;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.item-result-list {
+  flex-wrap: nowrap;
+  li {
+    display: flex;
+    line-height: 30px;
+    justify-content: space-between;
+    width: 100%;
+    .bold-text {
+      @extend .font-16, .font-weight-bold;
+      padding-right: 5px;
+      color: rgba(51, 51, 51, 0.9);
+    }
+  }
+}
+
+.payment-response {
+  .bold-text {
+    padding-right: 5px;
+  }
+  li {
+    justify-content: unset;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menus-drawer {
+    .ant-drawer-content-wrapper {
+      width: 100% !important;
+    }
+    .ant-drawer-close {
+      font-size: 12px;
+    }
+  }
+}
